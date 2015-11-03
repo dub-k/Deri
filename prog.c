@@ -834,7 +834,7 @@ int main(int argc, char *argv[])
                             {
                                 switch (variabletype[ti_variable]) // En fonction du type il existe différent moyen de la traité
                                 {
-                                    case DEC_VAR_INT:                  // Si la variable est un nombre
+                                    case 1:                  // Si la variable est un nombre
                                         if (isNomber(t4)) // Verifie que c'est bien un nombre
                                         {
                                             sprintf(t7,"%s%s%s",t7,t5,t4); // Ajoute a la suite de la chaine operatoir
@@ -842,7 +842,7 @@ int main(int argc, char *argv[])
                                             printf("\033[31;01mattribution de valeur invalide, il ne faut que des chiffres dans un entier !\033[00m");
                                         }
                                         break;
-                                    case DEC_VAR_CHAR:                // Si la variable est un char
+                                    case 2:                // Si la variable est un char
                                         
                                         tvar = strilen(t4);
                                         
@@ -885,7 +885,7 @@ int main(int argc, char *argv[])
                         
                         switch (variabletype[ti_variable]) // En fonction du type il existe différent moyen de la traité
                         {
-                            case DEC_VAR_INT:                  // Si la variable est un nombre
+                            case 1:                  // Si la variable est un nombre
                                 if (isNomber(valeur_variable)) // Verifie que c'est bien un nombre
                                 {
                                     fprintf(fpdest,"%s = %s;\n",t,valeur_variable); // Ajoute au fichier C
@@ -893,7 +893,7 @@ int main(int argc, char *argv[])
                                     printf("\033[31;01mattribution de variable invalide, il ne faut que des chiffres dans un entier ! et sans virgule ou point\033[00m");
                                 }
                                 break;
-                            case DEC_VAR_CHAR:                // Si la variable est un char
+                            case 2:                // Si la variable est un char
                                 printf("CHAR   %d \n",strilen(valeur_variable));
                                 
                                 tvar = strilen(valeur_variable);
